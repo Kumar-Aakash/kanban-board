@@ -1,0 +1,19 @@
+// Global theming
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+
+$family-sans-serif: "Nunito", sans-serif;
+
+$control-border-width: 2px;
+$input-border-color: transparent;
+$input-shadow: none;
+
+html, body {
+    height: 100%;
+}
+
+html {
+    background: url('./assets/pexels-background.jpg');
+    background-size: cover;
+    overflow-y: auto !important;
+}
