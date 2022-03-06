@@ -11,10 +11,6 @@ import { ColumnModel } from '@app/models/column.model';
 })
 export class MainViewComponent implements OnInit {
 
-  todo = ['Get to work', 'Pick up groceries', 'Go home', 'Fall asleep'];
-
-  done = ['Get up', 'Brush teeth', 'Take a shower', 'Check e-mail', 'Walk dog'];
-
   TODO = new ColumnModel('TODO', [
     'First task',
     'Second task',
