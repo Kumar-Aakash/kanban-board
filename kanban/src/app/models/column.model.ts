@@ -1,3 +1,3 @@
 export class ColumnModel {
-    constructor(public name: string, public tasks: string[]) {}
+    constructor(public name: string, public text: string, public isTextVisible: boolean, public tasks: string[]) {}
 }

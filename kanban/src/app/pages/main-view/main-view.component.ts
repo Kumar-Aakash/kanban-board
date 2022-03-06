@@ -11,24 +11,23 @@ import { ColumnModel } from '@app/models/column.model';
 })
 export class MainViewComponent implements OnInit {
 
-  TODO = new ColumnModel('TODO', [
-    'First task',
-    'Second task',
-    'This is a TODO 3',
-    'This is a TODO 4'
+  TODO = new ColumnModel('TODO', '', false, [
+    'This is a TODO 1',
+    'This is a TODO 2',
+    'This is a TODO 3'
   ]);
 
-  DOING = new ColumnModel('DOING', [
+  DOING = new ColumnModel('DOING', '', false, [
     'This is a DOING task 1',
     'This is a DOING task 2',
   ]);
 
-  DONE = new ColumnModel('DONE', [
+  DONE = new ColumnModel('DONE', '', false, [
     'This is a DONE task 1',
     'This is a DONE task 2',
   ]);
 
-  TESTED = new ColumnModel('TESTED', [
+  TESTED = new ColumnModel('TESTED', '', false, [
     'This is a TESTED task 1',
     'This is a TESTED task 2',
   ]);
@@ -40,11 +39,19 @@ export class MainViewComponent implements OnInit {
     this.TESTED
   ]);
 
+  inputText = '';
 
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  public addToColumn(columnName: string, text: string) {
+    if (text.trim() === '') {
+      return;
+    }
+    this.board.columns.find(column => column.name === columnName)?.tasks.push(text);
   }
 
 
